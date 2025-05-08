@@ -1,0 +1,16 @@
+# Ref: https://github.com/marketplace/actions/editorconfig-checker-action
+name: Editor Config
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  editorconfig:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: editorconfig-checker/action-editorconfig-checker@main
+      - run: editorconfig-checker
