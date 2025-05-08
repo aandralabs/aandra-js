@@ -1,0 +1,44 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+# https://github.com/pre-commit/pre-commit-hooks
+default_install_hook_types:
+  - pre-commit
+  - commit-msg
+
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v3.2.0
+  hooks:
+  - id: trailing-whitespace
+  - id: end-of-file-fixer
+  - id: mixed-line-ending
+    args: [--fix, "lf"]
+  - id: check-yaml
+  - id: check-json
+  - id: check-added-large-files
+    args: [--maxkb, "50000"]
+- repo: https://github.com/compilerla/conventional-pre-commit
+  rev: v4.0.0
+  hooks:
+  - id: conventional-pre-commit
+    stages: [commit-msg]
+    args: [
+      "build",
+      "chore",
+      "ci",
+      "docs",
+      "dx",
+      "feat",
+      "perf",
+      "refactor",
+      "revert",
+      "style",
+      "test",
+      "fix"
+    ]
+- repo: https://github.com/editorconfig-checker/editorconfig-checker
+  rev: v3.2.0
+  hooks:
+    - id: editorconfig-checker
+      stages:
+        - pre-commit

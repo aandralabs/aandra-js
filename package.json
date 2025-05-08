@@ -1,0 +1,29 @@
+{
+  "name": "aandra-js",
+  "version": "0.1.0",
+  "description": "Plug-and-play billing, credits, and identity for AI apps",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aandralabs/aandra-js.git"
+  },
+  "author": {
+    "name": "Aandra Labs",
+    "email": "team@aandra.it.com",
+    "url": "https://aandra.it.com/"
+  },
+  "contributors":[
+    {
+      "name": "Paal Øye-Strømme",
+      "email": "paal.o.eye@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aandralabs/aandra-js/issues"
+  },
+  "homepage": "https://github.com/aandralabs/aandra-js#readme"
+}
